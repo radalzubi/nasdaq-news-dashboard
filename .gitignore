@@ -11,6 +11,9 @@ next-env.d.ts
 # production
 /build
 
+# typescript incremental build info
+*.tsbuildinfo
+
 # local user-data store (watchlist / alerts / journal)
 /.data
 
