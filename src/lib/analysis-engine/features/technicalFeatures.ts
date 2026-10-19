@@ -1,6 +1,5 @@
 import { atr, ema, rsi, sma, vwap } from "@/lib/scoring/technicals";
 import type { Bar, Quote } from "@/lib/types";
-import { fmtPrice } from "@/lib/utils";
 import { ATR_PCT, REL_VOLUME, RSI } from "../core/config";
 import { clamp, round } from "../core/scoring";
 import type { KeyLevel, TechnicalRead } from "../core/types";
@@ -91,7 +90,6 @@ export function buildTechnicalRead(input: TechInput): TechnicalRead {
   const keyLevelScore = clamp(40 + Math.min(avgDistPct, 2) * 25);
 
   // ---- Chop risk (0–100, higher = choppier) --------------------------------
-  const intradayRangePct = last && quote?.dayHigh != null && quote?.dayLow != null && prevClose ? ((quote.dayHigh - quote.dayLow) / prevClose) * 100 : null;
   const atrPct = atrVal !== null && last ? (atrVal / last) * 100 : null;
   let chopPts = 35;
   if (volume === "Light") chopPts += 25;

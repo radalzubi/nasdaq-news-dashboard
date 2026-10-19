@@ -72,6 +72,7 @@ npm run build       # production build
 npm start           # run the production build
 npm test            # run the unit tests (scoring + risk logic)
 npm run typecheck   # tsc --noEmit
+npm run lint        # ESLint (next/core-web-vitals + next/typescript)
 ```
 
 ---
@@ -244,7 +245,7 @@ Covers: news relevance scoring & classification, news clustering/dedup, technica
 and summary logic, market-clarity scoring (including stale-data and event-risk penalties), and the
 risk calculator. UI pages are kept resilient with skeleton loaders and clean unavailable states.
 
-CI (`.github/workflows/ci.yml`) runs `npm run typecheck`, `npm test` and `npm run build` on every
+CI (`.github/workflows/ci.yml`) runs `npm run typecheck`, `npm run lint`, `npm test` and `npm run build` on every
 push to `main` and every pull request.
 
 ---

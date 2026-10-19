@@ -43,8 +43,8 @@ export default function NewsPage() {
 
   // Clusters arrive ranked by relevance (most important first). Filters narrow
   // by topic; "Biggest only" keeps just the highest-impact stories.
-  const ranked = news.data?.clusters ?? [];
-  const filtered = useMemo(() => ranked.filter((c) => matches(c, filter)), [ranked, filter]);
+  const clusters = news.data?.clusters;
+  const filtered = useMemo(() => (clusters ?? []).filter((c) => matches(c, filter)), [clusters, filter]);
 
   return (
     <div className="mx-auto max-w-3xl space-y-4">

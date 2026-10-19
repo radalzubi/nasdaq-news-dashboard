@@ -1,4 +1,4 @@
-import { MEGACAP_SYMBOLS, NASDAQ_LEADERS, PRIMARY_LABEL, PRIMARY_SYMBOL, SEMI_SYMBOLS, SYMBOL_NAMES } from "@/lib/config";
+import { MEGACAP_SYMBOLS, NASDAQ_LEADERS, PRIMARY_SYMBOL, SEMI_SYMBOLS, SYMBOL_NAMES } from "@/lib/config";
 import type {
   Bias,
   ClarityComponent,

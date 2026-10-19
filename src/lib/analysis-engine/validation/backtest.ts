@@ -1,7 +1,6 @@
 import { rsi, sma } from "@/lib/scoring/technicals";
 import type { Bar } from "@/lib/types";
 import { BACKTEST_ASSUMPTIONS, BACKTEST_MIN_SAMPLE, RSI } from "../core/config";
-import { round } from "../core/scoring";
 import type { BacktestResult } from "../core/types";
 import { validateNoLookAhead } from "./leakageChecks";
 import { computeMetrics, type ForwardObservation } from "./performanceMetrics";

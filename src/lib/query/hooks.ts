@@ -42,7 +42,7 @@ export interface Envelope<T> {
   data: T;
   meta: DataMeta;
 }
-export interface BriefResponse extends Envelope<MarketBrief> {}
+export type BriefResponse = Envelope<MarketBrief>;
 export interface NewsResponse {
   clusters: NewsCluster[];
   items: NewsItem[];
@@ -53,7 +53,7 @@ export interface MacroResponse {
   eventRisk: EventRisk;
   meta: DataMeta;
 }
-export interface MoversResponse extends Envelope<MoversReport> {}
+export type MoversResponse = Envelope<MoversReport>;
 export interface TechnicalResponse {
   data: TechnicalSummary | null;
   meta: DataMeta;
